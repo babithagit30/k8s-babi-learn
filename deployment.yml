@@ -7,10 +7,14 @@ spec:
   selector:
     matchLabels:
       app: helloworld
+  template:
+    metadata:
+      labels:
+        app: helloworld
     spec:
       containers:
         - name: nginx-demo
           image: nginx
           ports:
-           - name: nginx-port
-             containerPort: 3000
+            - name: nginx-port
+              containerPort: 3000
